@@ -52,9 +52,8 @@ const NavBar = () => {
 
         <li>
         <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/15gByYTHFXgvuTIxxdVmRxBJr4xR2_G0B/view?usp=sharing"
               className="px-4 cursor-pointer capitalize font-medium  hover:scale-105 duration-200"
-              download={true}
               target="_blank"
               rel="noreferrer"
             >
