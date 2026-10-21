@@ -9,7 +9,8 @@ export const profile = {
   email: "sanojsanoj638@gmail.com",
   phone: "+91 99735 95208",
   phoneHref: "tel:+919973595208",
-  resume: "/Sanoj_Kumar_Resume.pdf",
+  // Google Drive file: replace it there (Manage versions) to update the resume without a deploy.
+  resume: "https://drive.google.com/file/d/15gByYTHFXgvuTIxxdVmRxBJr4xR2_G0B/view?usp=sharing",
   links: {
     github: "https://github.com/sanojkumaryadav",
     linkedin: "https://www.linkedin.com/in/sanojcoder/",
