@@ -24,7 +24,7 @@ export const profile = {
   ],
   stats: [
     { value: "4+", label: "Years in production" },
-    { value: "6+", label: "Apps shipped to the stores" },
+    { value: "10+", label: "Apps shipped to the stores" },
     { value: "150+", label: "Production bugs fixed" },
   ],
 };
