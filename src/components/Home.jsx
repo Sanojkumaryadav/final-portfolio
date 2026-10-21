@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImage from "../assets/profileImage1.png";
+import ProfileImage from "../assets/sanoj.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { HiOutlineDocumentDownload } from "react-icons/hi";
 import { Link } from "react-scroll";
@@ -49,11 +49,13 @@ const Home = () => {
           <p className="mt-6 text-gray-500 text-sm">📍 {profile.location}</p>
         </div>
 
-        <div>
+        <div className="shrink-0 rounded-full p-1.5 bg-gradient-to-br from-cyan-400 to-blue-600 shadow-2xl shadow-cyan-500/20">
           <img
             src={ProfileImage}
             alt={profile.name}
-            className="rounded-2xl mx-auto w-2/3 md:w-96 p-4"
+            width={640}
+            height={640}
+            className="block rounded-full w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 object-cover"
           />
         </div>
       </div>
