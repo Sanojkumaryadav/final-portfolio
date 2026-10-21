@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { profile } from "../data/profile";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -16,20 +17,24 @@ const NavBar = () => {
     },
     {
       id: 3,
-      link: "projects",
+      link: "experience",
     },
     {
       id: 4,
-      link: "skills",
+      link: "projects",
     },
     {
       id: 5,
+      link: "skills",
+    },
+    {
+      id: 6,
       link: "contact",
     },
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black/90 backdrop-blur fixed z-50">
       <div>
         <h1 className="text-5xl font-signature ml-2">Sanoj</h1>
       </div>
@@ -52,7 +57,7 @@ const NavBar = () => {
 
         <li>
         <a
-              href="https://drive.google.com/file/d/15gByYTHFXgvuTIxxdVmRxBJr4xR2_G0B/view?usp=sharing"
+              href={profile.resume}
               className="px-4 cursor-pointer capitalize font-medium  hover:scale-105 duration-200"
               target="_blank"
               rel="noreferrer"

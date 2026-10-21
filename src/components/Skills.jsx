@@ -1,117 +1,74 @@
 import React from "react";
+import {
+  SiSwift,
+  SiFlutter,
+  SiDart,
+  SiFirebase,
+  SiGooglemaps,
+  SiFastapi,
+  SiLangchain,
+  SiPython,
+  SiFastlane,
+  SiGithubactions,
+  SiXcode,
+  SiAndroidstudio,
+  SiNodedotjs,
+  SiMongodb,
+  SiReact,
+  SiGit,
+} from "react-icons/si";
+import { skillGroups } from "../data/profile";
+import SectionTitle from "./SectionTitle";
 
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
-import nodejs from "../assets/nodejs.png";
-import postman from "../assets/postman.png";
-import github from "../assets/github.png";
-import tailwind from "../assets/tailwind.png";
-import vscode from "../assets/vscode.png";
-import mongodb from "../assets/mongo.png";
-import bootstrap from "../assets/bootstrap.png";
-import express from "../assets/express.png";
-
+const icons = [
+  { Icon: SiSwift, title: "Swift", color: "text-orange-500" },
+  { Icon: SiXcode, title: "Xcode", color: "text-blue-400" },
+  { Icon: SiFlutter, title: "Flutter", color: "text-sky-400" },
+  { Icon: SiDart, title: "Dart", color: "text-cyan-400" },
+  { Icon: SiAndroidstudio, title: "Android Studio", color: "text-green-500" },
+  { Icon: SiFirebase, title: "Firebase", color: "text-amber-400" },
+  { Icon: SiGooglemaps, title: "Google Maps", color: "text-emerald-400" },
+  { Icon: SiLangchain, title: "LangChain", color: "text-teal-300" },
+  { Icon: SiFastapi, title: "FastAPI", color: "text-teal-400" },
+  { Icon: SiPython, title: "Python", color: "text-yellow-300" },
+  { Icon: SiFastlane, title: "Fastlane", color: "text-blue-300" },
+  { Icon: SiGithubactions, title: "GitHub Actions", color: "text-blue-400" },
+  { Icon: SiNodedotjs, title: "Node.js", color: "text-green-500" },
+  { Icon: SiMongodb, title: "MongoDB", color: "text-green-400" },
+  { Icon: SiReact, title: "React", color: "text-sky-400" },
+  { Icon: SiGit, title: "Git", color: "text-orange-600" },
+];
 
 const Skills = () => {
-  const techs = [
-    {
-      id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
-    },
-    {
-      id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
-    },
-    {
-      id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 4,
-      src: reactImage,
-      title: "React",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 5,
-      src: nodejs,
-      title: "Node JS",
-      style: "shadow-white",
-    },
-    {
-      id: 6,
-      src: mongodb,
-      title: "MongoDB",
-      style: "shadow-sky-400",
-    },
-    {
-      id: 6,
-      src: express,
-      title: "ExpressJS",
-      style: "shadow-sky-400",
-    },
-    {
-      id: 5,
-      src: tailwind,
-      title: "Tailwind",
-      style: "shadow-sky-400",
-    },
-    {
-      id: 5,
-      src: bootstrap,
-      title: "Bootstrap",
-      style: "shadow-sky-400",
-    },
-   
-    {
-      id: 7,
-      src: postman,
-      title: "Postman",
-      style: "shadow-pink-400",
-    },
-    {
-      id: 8,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
-    },
-    {
-      id: 9,
-      src: vscode,
-      title: "VS Code",
-      style: "shadow-gray-400",
-    },
-  ];
-
   return (
-    <div
-      name="skills"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-auto"
-    >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-auto text-white">
-        <div>
-          <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline" >
-          Skills
-          </p>
-          <p className="py-6">These are the technologies I've worked with</p>
+    <div name="skills" className="bg-gradient-to-b from-black to-gray-800 w-full">
+      <div className="max-w-screen-lg mx-auto px-4 py-24 w-full text-white">
+        <SectionTitle title="Skills" subtitle="The tools I use to build and ship mobile apps" />
+
+        <div className="mt-10 grid grid-cols-4 sm:grid-cols-8 gap-4 text-center">
+          {icons.map(({ Icon, title, color }) => (
+            <div
+              key={title}
+              className="flex flex-col items-center gap-2 rounded-lg py-3 shadow-md shadow-gray-900 hover:scale-105 duration-300"
+              title={title}
+            >
+              <Icon className={color} size={36} aria-hidden />
+              <span className="text-xs text-gray-300">{title}</span>
+            </div>
+          ))}
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
-          {techs.map(({ id, src, title, style }) => (
-            <div
-              key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-            >
-              <img src={src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4">{title}</p>
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillGroups.map(({ title, items }) => (
+            <div key={title} className="rounded-lg border border-gray-700 bg-gray-900/70 p-5">
+              <h3 className="font-bold text-cyan-400">{title}</h3>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {items.map((item) => (
+                  <li key={item} className="rounded bg-gray-800 px-2 py-1 text-sm text-gray-200">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
