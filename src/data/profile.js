@@ -10,7 +10,7 @@ export const profile = {
   phone: "+91 99735 95208",
   phoneHref: "tel:+919973595208",
   // Google Drive file: replace it there (Manage versions) to update the resume without a deploy.
-  resume: "https://drive.google.com/file/d/15gByYTHFXgvuTIxxdVmRxBJr4xR2_G0B/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1FPQZX87zbugwba0kSi3PLbEg_GUtw58S/view",
   links: {
     github: "https://github.com/sanojkumaryadav",
     linkedin: "https://www.linkedin.com/in/sanojcoder/",
